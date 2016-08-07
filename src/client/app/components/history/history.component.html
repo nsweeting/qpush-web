@@ -1,0 +1,34 @@
+<h4 class="ui horizontal divider header">
+  <i class="history icon"></i>
+  History
+</h4>
+<table class="ui celled table">
+  <thead>
+    <tr>
+      <th width="5%">Status</th>
+      <th>Class</th>
+      <th>Args</th>
+      <th>Performed</th>
+      <th>Error</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let history of histories">
+      <td class="center aligned">
+        <div *ngIf="history.status">
+          <i class="green circle icon"></i>
+        </div>
+        <div *ngIf="history.status == false">
+          <i class="red circle icon"></i>
+        </div>
+      </td>
+      <td>{{history.klass}}</td>
+      <td>{{argsToString(history.args)}}</td>
+      <td>{{history.performed * 1000 | date:'medium'}}</td>
+      <td>{{history.error}}</td>
+    </tr>
+  </tbody>
+  <tfoot>
+  </tfoot>
+</table>
+<br />

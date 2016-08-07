@@ -1,0 +1,21 @@
+<table class="ui celled table">
+  <thead>
+    <tr>
+      <th>Class</th>
+      <th>Args</th>
+      <th>Next</th>
+      <th>Cron</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cron of crons">
+      <td>{{cron.klass}}</td>
+      <td>{{argsToString(cron.args)}}</td>
+      <td>{{cron.perform_at * 1000 | date:'medium'}}</td>
+      <td>{{cron.cron}}</td>
+    </tr>
+  </tbody>
+  <tfoot>
+  </tfoot>
+</table>
+<br />

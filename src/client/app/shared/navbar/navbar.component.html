@@ -1,0 +1,28 @@
+<div class="ui menu stackable">
+  <div class="header item">
+    <img class="logo" src="app/shared/navbar/assets/logo.png">
+  </div>
+  <a [routerLink]="['/dashboard']" [routerLinkActive]="['active']" class="item">
+    <i class="dashboard icon"></i>Dashboard
+  </a>
+  <a [routerLink]="['/queue_job']" [routerLinkActive]="['active']" class="item">
+    Queue Job
+  </a>
+  <a [routerLink]="['/delayed']" [routerLinkActive]="['active']" class="item">
+    Delayed
+  </a>
+  <a [routerLink]="['/morgue']" [routerLinkActive]="['active']" class="item">
+    Morgue
+  </a>
+  <a class="item">
+    Statistics
+  </a>
+  <a class="item">
+    Settings
+  </a>
+  <div class="right menu">
+    <div class="item">
+      <sd-heartbeat></sd-heartbeat>
+    </div>
+  </div>
+</div>

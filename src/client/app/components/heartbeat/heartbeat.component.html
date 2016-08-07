@@ -1,0 +1,8 @@
+<div *ngIf="heartbeat">
+  <i *ngIf="heartbeat.status" class="heart icon large red"></i>
+  <i *ngIf="heartbeat.status == false" class="minus icon large black"></i>
+  <b>{{heartbeat.namespace}}</b>
+</div>
+<div *ngIf="!heartbeat">
+  <i class="question icon large black"></i>
+</div>

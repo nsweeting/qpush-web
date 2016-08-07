@@ -1,0 +1,55 @@
+<h4 class="ui horizontal divider header">
+  <i class="server icon"></i>
+  Statistics
+</h4>
+<div class="ui cards four stackable">
+  <div class="ui raised card">
+    <div class="center aligned content">
+      <div class="ui tiny statistic">
+        <div class="value" *ngIf="stats">
+          {{stats.current_queue}}
+        </div>
+        <div class="label">
+          Current Queue
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ui raised card">
+    <div class="center aligned content">
+      <div class="ui tiny statistic">
+        <div class="value" *ngIf="stats">
+          {{stats.performed}}
+        </div>
+        <div class="label">
+          Performed
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="error" *ngIf="errorMessage">{{errorMessage}}</div>
+  <div class="ui raised card">
+    <div class="center aligned content">
+      <div class="ui tiny statistic">
+        <div class="value" *ngIf="stats">
+          {{stats.percent_success}}%
+        </div>
+        <div class="label">
+          Success Rate
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ui raised card">
+    <div class="center aligned content">
+      <div class="ui tiny statistic">
+        <div class="value" *ngIf="stats">
+          {{stats.dead}}
+        </div>
+        <div class="label">
+          Dead Jobs
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

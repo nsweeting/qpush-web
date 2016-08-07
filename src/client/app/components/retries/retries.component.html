@@ -1,0 +1,21 @@
+<table class="ui celled table">
+  <thead>
+    <tr>
+      <th>Class</th>
+      <th>Args</th>
+      <th>Retry</th>
+      <th>Attempts</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let retry of retries">
+      <td>{{retry.klass}}</td>
+      <td>{{argsToString(retry.args)}}</td>
+      <td>{{retry.perform_at * 1000 | date:'medium'}}</td>
+      <td>{{retry.total_fail}} of {{retry.retry_max}}</td>
+    </tr>
+  </tbody>
+  <tfoot>
+  </tfoot>
+</table>
+<br />
